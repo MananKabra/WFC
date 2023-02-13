@@ -24,7 +24,8 @@ class _bottomnavState extends State<bottomnav> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: false,
-        backgroundColor: Color.fromARGB(255, 12, 89, 205),
+        elevation: 2,
+        backgroundColor: Color.fromARGB(255, 12, 203, 228),
         onTap: (index) {
           setState(() {
             myIndex = index;

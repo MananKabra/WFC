@@ -6,6 +6,7 @@ import 'package:foodonline/pages/bottombar/bottom_nav.dart';
 import 'package:foodonline/pages/login/login_page_seller.dart';
 import 'package:foodonline/pages/map.dart';
 import 'package:foodonline/pages/model/uder_model.dart';
+import 'package:foodonline/pages/seller_order/seller_intro_page.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:foodonline/pages/home/home_page.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -65,8 +66,6 @@ class _HomePageState extends State<HomePage> {
   final CollectionReference _foodorder =
       FirebaseFirestore.instance.collection('food');
 
-
-
   // _foodorder.doc('food').get().then((DocumentSnapshot documentSnapshot) {
   //   if (documentSnapshot.exists) {
   //     print('Document data: ${documentSnapshot.data()}');
@@ -105,21 +104,21 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: Colors.pink,
                 ),
               ),
-              DrawerItems(
-                icon: Icons.person,
-                title: Text("Profile"),
+              ListTile(
+                leading: Icon(Icons.payment),
+                title: Text("Donate"),
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SellerIntro()));
+                },
               ),
-              DrawerItems(
-                icon: Icons.add_shopping_cart,
-                title: Text("Cart"),
-              ),
-              DrawerItems(
-                icon: Icons.shopping_basket_sharp,
-                title: Text("My Order"),
-              ),
-              DrawerItems(
-                icon: Icons.exit_to_app,
-                title: Text("Log Out"),
+              ListTile(
+                leading: Icon(Icons.map),
+                title: Text("Map"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => MapPage()));
+                },
               ),
             ],
           ),

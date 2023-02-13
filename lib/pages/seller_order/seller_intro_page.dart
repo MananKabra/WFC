@@ -14,16 +14,33 @@ class _SellerIntroState extends State<SellerIntro> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Container(
-            child: MaterialButton(
-              color: Colors.red,
-              onPressed: () {
-                RoutingPage.goToNext(
-                    context: context, navigateTo: SellerOrderDetails());
-              },
-              child: Text('Push Order'),
+        body: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("images/makescreen.png"),
+                fit: BoxFit.cover,
+              ),
             ),
+            child: const Center(
+                child: Text('Give what you can!',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Poppins',
+                        backgroundColor: Color.fromARGB(255, 250, 244, 177),
+                        fontSize: 30,
+                        color: Color.fromARGB(255, 3, 73, 237))))),
+        floatingActionButton: FloatingActionButton(
+          // Change size of button and icon to big
+          mini: false,
+
+          onPressed: () {
+            RoutingPage.goToNext(
+                context: context, navigateTo: SellerOrderDetails());
+          },
+          backgroundColor: Color.fromARGB(255, 7, 213, 220),
+          child: const Icon(
+            Icons.add,
+            color: Color.fromARGB(255, 3, 73, 237),
           ),
         ),
       ),
