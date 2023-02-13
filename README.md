@@ -11,10 +11,10 @@
 </h3>
 
 
-<h3>
-  Latest updates on our app-->
- </h3>
+
  
- <p>"Welcome to the repository of Team Scaffold's food waste management app, developed with the Flutter framework. Our team was motivated to tackle the growing issue of food waste and aimed to create an innovative solution through this app. Despite not winning the hackathon, we were determined to continue working on this project and improve it further."</p>
+ <p align="center">Welcome to the repository of Team Scaffold's food waste management app, developed with the Flutter framework. Our team was motivated to tackle the growing issue of food waste and aimed to create an innovative solution through this app. Despite not winning the hackathon, we were determined to continue working on this project and improve it further.</p>
+ 
+ 
 
 
